@@ -1,1 +1,10 @@
-<h1>Hello I'm the Index View!</h1>
+<h1>Hello from index.html.erb</h1>
+
+<ul>
+  <% @tasks.each do |task| %>
+    <li>
+      <%= task.title %>
+      <%= link_to 'delete', task, method: :delete,  data: { confirm: "Are you sure?" } %>
+    </li>
+  <% end %>
+</ul>
